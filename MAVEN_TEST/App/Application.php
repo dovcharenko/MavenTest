@@ -32,17 +32,22 @@ class Application {
     }
 
     public function Controller() {
+        echo "CONTROLLEER";
 
             $page = isset($_GET['page']) ? $_GET['page'] : '';
 
+            echo "page is: ";
+            var_dump($page);
+            
             switch ($page) {
-                case 'value':
+                case 'viewJPEG':
+                    include('/modules/import_to_jpeg/importToJpeg.class.php');
                     # code...
                     break;
                 
                 default:
 
-                    include 'pages/home.php'; 
+                    //include 'pages/home.php'; 
 
                     break;
             }
@@ -52,6 +57,6 @@ class Application {
 
 
 
-$testApp = Application::Run("TEST APPLICATION \n");
+$testApp = Application::Run();
 
-$testApp->Controller();
+//$testApp->Controller();

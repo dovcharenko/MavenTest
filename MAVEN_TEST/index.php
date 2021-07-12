@@ -1,6 +1,7 @@
 <?php
 namespace MavenTest\Application;
+echo "TEST TEST";
 
-require_once "App/Application.php";
+//require_once "App/Application.php";
 
 
